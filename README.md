@@ -13,13 +13,14 @@
 - SQLAlchemy
 - Alembic
 - Asyncio
+- Google API
 ## Команды для развертывания
 ```
-git clone https://github.com/opzhai/cat_charity_fund
+git clone https://github.com/opzhai/QRkot_spreadsheets.git
 ```
 
 ```
-cd cat_charity_fund
+cd QRkot_spreadsheets
 ```
 
 Cоздать и активировать виртуальное окружение:
@@ -54,6 +55,19 @@ DATABASE_URL=sqlite+aiosqlite:///./fastapi.db
 SECRET=fjednfsvlkdnvljdsnf
 FIRST_SUPERUSER_EMAIL=admin@mail.ru
 FIRST_SUPERUSER_PASSWORD=admin
+# адрес вашего личного гугл-аккаунта
+EMAIL=
+# данные из JSON-файла с информацией для авторизации приложения в сервисном аккаунте
+TYPE="service_account"
+PROJECT_ID=
+PRIVATE_KEY_ID=
+PRIVATE_KEY=
+CLIENT_EMAIL=
+CLIENT_ID=
+AUTH_URI="https://accounts.google.com/o/oauth2/auth"
+TOKEN_URI="https://oauth2.googleapis.com/token"
+auth_provider_x509_cert_url="https://www.googleapis.com/oauth2/v1/certs"
+client_x509_cert_url=
 ```
 Применить миграции для создания БД
 ```

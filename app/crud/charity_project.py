@@ -28,7 +28,9 @@ class CRUDCharityProject(CRUDBase):
     ):
         projects = await session.execute(
             select(CharityProject).where(
-                CharityProject.fully_invested == True))
+                CharityProject.fully_invested is True
+            )
+        )
         projects = projects.scalars().all()
         return projects
 
